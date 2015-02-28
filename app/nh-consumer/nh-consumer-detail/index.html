@@ -1,0 +1,15 @@
+<ol class="breadcrumb">
+	<li><a href="#">首页</a></li>
+	<li><a ui-sref="consumer.list">客户列表</a></li>
+	<li class="active">查看详情</li>
+</ol>
+<div nh-stages current="currentSatge" stages="stages"></div>
+
+
+<div nh-title>跟进详情</div>
+<div class="row" style="margin-bottom:20px">
+	<div class="col-md-11"><div nh-timeline follows="::follows" ></div></div>
+	<div class="col-md-1">	<button type="button" class="btn btn-success "   ng-click="open()">写跟进</button></div>
+	
+</div>
+<div nh-title>报备备注</div>

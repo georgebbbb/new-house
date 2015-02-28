@@ -1,0 +1,46 @@
+<ol class="breadcrumb">
+  <li><a href="#">首页</a></li>
+  <li><a class="active">客户列表</a></li>
+</ol>
+
+
+<table st-table="rowCollection" class="table table-striped">
+	<thead>
+		<tr>
+			<th>客户</th>
+			<th>手机</th>
+			<th>意向楼盘</th>
+			<th>客户状态</th>
+			<th>佣金</th>
+			<th>报备人</th>
+			<th>报备门店</th>
+			<th>报备公司</th>
+			<th>报备时间</th>
+			<th>最后跟进时间</th>
+			<th>操作</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="row in rowCollection">
+			<td><a href=""  ui-sref="consumer.detail">{{row.firstName}}</a>   </td>
+			<td>{{row.lastName}}</td>
+			<td>{{row.firstName}}</td>
+			<td>{{row.lastName}}</td>
+			
+			<td>{{row.firstName}}</td>
+			<td>{{row.lastName}}</td>
+			
+			<td>{{row.balance}}</td>
+			<td>{{row.email}}</td>
+			<td>{{row.email}}</td>
+			<td><a type="button" ui-sref="houses.add">编辑</a></td>
+		</tr>
+	</tbody>
+	<tfoot>
+	<tr>
+		<td colspan="5" class="text-center">
+			<div st-pagination="" st-items-by-page="itemsByPage" st-displayed-pages="7"></div>
+		</td>
+	</tr>
+	</tfoot>
+</table>
