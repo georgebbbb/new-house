@@ -1,0 +1,1 @@
+var nhDynamic = angular.module('nhDynamic', ['smart-table','nhLayout','w5c.validator','textAngular']);

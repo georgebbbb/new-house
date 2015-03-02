@@ -1,6 +1,5 @@
-angular.module('nhHome', ['ui.router','nhHouse','nhLayout','nhConsumer']).
- config(function($stateProvider, $urlRouterProvider) {
-
+angular.module('nhHome', ['ui.router', 'nhHouse', 'nhLayout', 'nhConsumer','nhPersonnel','nhIndividual','nhDynamic']).
+config(function($stateProvider, $urlRouterProvider) {
 
 
 
@@ -11,35 +10,95 @@ angular.module('nhHome', ['ui.router','nhHouse','nhLayout','nhConsumer']).
   // Now set up the states
   $stateProvider
 
- 	.state('houses', {
-      url: "/houses",
-      templateUrl: 'nh-house/index.html',
-      
-    }).state('houses.list', {
-      url: "/list",
-       templateUrl: "nh-house/nh-house-list/index.html",
-       controller:'nhHouseList'
+    .state('houses', {
+    url: "/houses",
+    templateUrl: 'nh-house/index.html',
 
-    }).state('houses.add', {
-      url: ":houseId/add",
-       templateUrl: "nh-house/nh-house-add/index.html",
-           controller:'nhHouseList'
+  }).state('houses.list', {
+    url: "/list",
+    templateUrl: "nh-house/nh-house-list/index.html",
+    controller: 'nhHouseList'
 
-    }).state('consumer', {
-      url: "/consumer",
-      templateUrl: 'nh-consumer/index.html',
-      
-    }).state('consumer.list', {
-      url: "/list",
-       templateUrl: "nh-consumer/nh-consumer-list/index.html",
-       controller:'nhConsumerList'
+  }).state('houses.add', {
+    url: ":houseId/add",
+    templateUrl: "nh-house/nh-house-add/index.html",
+    controller: 'nhHouseList'
 
-    }).state('consumer.detail', {
-      url: "/detail",
-       templateUrl: "nh-consumer/nh-consumer-detail/index.html",
-       controller:'nhConsumerDetail'
+  }).state('houses.detail', {
+    url: ":houseId/detail",
+    templateUrl: "nh-house/nh-house-detail/index.html",
+    controller: 'nhHouseDetail'
 
-    })
+  }).state('consumer', {
+    url: "/consumer",
+    templateUrl: 'nh-consumer/index.html',
+
+  }).state('consumer.list', {
+    url: "/list",
+    templateUrl: "nh-consumer/nh-consumer-list/index.html",
+    controller: 'nhConsumerList'
+
+  }).state('consumer.detail', {
+    url: "/detail",
+    templateUrl: "nh-consumer/nh-consumer-detail/index.html",
+    controller: 'nhConsumerDetail'
+
+  }).state('personnel', {
+    url: "/personnel",
+    templateUrl: "nh-personnel/index.html",
+
+
+  }).state('personnel.list', {
+    url: "/list",
+    templateUrl: "nh-personnel/nh-personnel-list/index.html",
+    controller: 'nhPersonnelList'
+
+
+  }).state('personnel.add', {
+    url: "/add",
+    templateUrl: "nh-personnel/nh-personnel-add/index.html",
+    controller: 'nhPersonnelAdd'
+
+
+  }).state('individual', {
+    url: "/individual",
+    templateUrl: "nh-individual/index.html",
+    controller:'nhIndividual'
+
+
+  }).state('individual.infoModify', {
+    url: "/info",
+    templateUrl: "nh-individual/nh-individual-info-modify/index.html",
+    controller: 'nhIndividualInfoModify'
+
+
+
+  }).state('individual.passwordModify', {
+    url: "/passwordModify",
+    templateUrl: "nh-individual/nh-individual-password-modify/index.html",
+        controller: 'nhIndividualPasswordModify'
+
+
+  }).state('dynamic', {
+    url: "/dynamic",
+    templateUrl: "nh-dynamic/index.html",
+        
+
+
+  }).state('dynamic.list', {
+    url: "/list",
+    templateUrl: "nh-dynamic/nh-dynamic-list/index.html",
+    controller :'nhDynamicList'
+
+
+  }).state('dynamic.add', {
+    url: "/add",
+    templateUrl: "nh-dynamic/nh-dynamic-add/index.html",
+    controller :'nhDynamicAdd'
+
+
+  })
+
 
 
 

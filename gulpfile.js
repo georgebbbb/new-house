@@ -42,12 +42,16 @@ var source = {
       'node_modules/angular-file-service/dist/angular-file-service.min.js',
       'node_modules/bootstrap/dist/js/bootstrap.min.js',
       'node_modules/ngSocket/dist/ngSocket.js',
+      'node_modules/textangular/dist/textAngular-rangy.min.js',
+      'node_modules/textangular/dist/textAngular-sanitize.min.js',
+      'node_modules/textangular/dist/textAngular.min.js',
       'lib/**/*.js'
     ],
   },
   css: [
     'node_modules/bootstrap/dist/css/bootstrap.min.css',
-    'node_modules/font-awesome/css/font-awesome.min.css'
+    'node_modules/font-awesome/css/font-awesome.min.css',
+    'node_modules/textangular/src/textAngular.css'
   ],
   less: [
     'app/**.less',

@@ -1,17 +1,13 @@
 <ol class="breadcrumb">
   <li><a href="#">首页</a></li>
   <li class="active">楼盘列表</li>
-</ol>
-<a type="button" class="btn btn-success"  ui-sref="houses.add">新增楼盘</a>
+</ol>	
 <table st-table="rowCollection" class="table table-striped">
 	<thead>
 	<tr>
+		<th>楼盘动态</th>
+		<th>更新时间</th>
 		<th>楼盘名称</th>
-		<th>合作状态</th>
-		<th>合作开始时间</th>
-		<th>合作结束时间</th>
-		<th>佣金</th>
-		<th>项目经理</th>
 		<th>操作</th>
 	</tr>
 	</thead>
@@ -20,12 +16,11 @@
 		<td>
 		<a ui-sref="houses.detail">{{row.firstName}}</a>
 		</td>
-		<td>{{row.lastName}}</td>
+	
 		<td>{{row.birthDate}}</td>
 		<td>{{row.balance}}</td>
-		<td>{{row.email}}</td>
-		<td>{{row.email}}</td>
-		<td><a type="button" ui-sref="houses.add">编辑</a></td>
+
+		<td><a type="button" ui-sref="houses.add">编辑</a><a type="button" ui-sref="houses.add">删除</a></td>
 	</tr>
 	</tbody>
 			<tfoot>

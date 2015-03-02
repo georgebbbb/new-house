@@ -39,6 +39,7 @@
     "jquery": "^2.1.1",
     "lodash": "^2.4.1",
     "ng-socket": "git://github.com/Mayflower/ngSocket#10e8ecb690d3acab092316b2b12b663069b48bff",
-    "request": "^2.47.0"
+    "request": "^2.47.0",
+    "textangular": "^1.3.7"
   }
 }
