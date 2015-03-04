@@ -45,6 +45,7 @@ var source = {
       'node_modules/textangular/dist/textAngular-rangy.min.js',
       'node_modules/textangular/dist/textAngular-sanitize.min.js',
       'node_modules/textangular/dist/textAngular.min.js',
+      'node_modules/ng-file-upload/dist/angular-file-upload.min.js',
       'lib/**/*.js'
     ],
   },

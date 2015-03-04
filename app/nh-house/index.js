@@ -1,5 +1,5 @@
 // Module definition
-var nhHouse = angular.module('nhHouse', ['smart-table','nhLayout','w5c.validator']);
+var nhHouse = angular.module('nhHouse', ['smart-table','nhLayout','w5c.validator','angularFileUpload', 'akoenig.deckgrid']);
 nhHouse.config(["w5cValidatorProvider", function (w5cValidatorProvider) {
 
         // 全局配置

@@ -22,7 +22,7 @@ config(function($stateProvider, $urlRouterProvider) {
   }).state('houses.add', {
     url: ":houseId/add",
     templateUrl: "nh-house/nh-house-add/index.html",
-    controller: 'nhHouseList'
+    controller: 'nhHouseAdd'
 
   }).state('houses.detail', {
     url: ":houseId/detail",
@@ -54,13 +54,7 @@ config(function($stateProvider, $urlRouterProvider) {
     controller: 'nhPersonnelList'
 
 
-  }).state('personnel.add', {
-    url: "/add",
-    templateUrl: "nh-personnel/nh-personnel-add/index.html",
-    controller: 'nhPersonnelAdd'
-
-
-  }).state('individual', {
+  })  .state('individual', {
     url: "/individual",
     templateUrl: "nh-individual/index.html",
     controller:'nhIndividual'
@@ -95,6 +89,12 @@ config(function($stateProvider, $urlRouterProvider) {
     url: "/add",
     templateUrl: "nh-dynamic/nh-dynamic-add/index.html",
     controller :'nhDynamicAdd'
+
+
+  }).state('dynamic.detail', {
+    url: "/detail",
+    templateUrl: "nh-dynamic/nh-dynamic-detail/index.html",
+    controller :'nhDynamicDetail'
 
 
   })

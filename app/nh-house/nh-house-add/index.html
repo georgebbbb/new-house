@@ -1,7 +1,7 @@
 <ol class="breadcrumb">
-  <li><a href="#">首页</a></li>
-  <li><a ui-sref="houses.list">楼盘列表</a></li>
-  <li class="active">新增楼盘</li>
+	<li><a href="#">首页</a></li>
+	<li><a ui-sref="houses.list">楼盘列表</a></li>
+	<li class="active">新增楼盘</li>
 </ol>
 <form class="form-horizontal w5c-form demo-form" role="form"
 	w5c-form-validate="vm.validateOptions" novalidate name="validateForm">
@@ -43,9 +43,6 @@
 	</div>
 	
 	<div nh-title>合作规则</div>
-
-
-
 	<div class="form-group">
 		<label class="col-sm-2 control-label"> 合作房源：
 		</label>
@@ -54,7 +51,7 @@
 			class="form-control" name="normal" >
 		</div>
 	</div>
-		<div class="form-group">
+	<div class="form-group">
 		<label class="col-sm-2 control-label"> 购房优惠：
 		</label>
 		<div class="col-sm-6">
@@ -62,7 +59,7 @@
 			class="form-control" name="normal" >
 		</div>
 	</div>
-		<div class="form-group">
+	<div class="form-group">
 		<label class="col-sm-2 control-label"> 报备保护期：
 		</label>
 		<div class="col-sm-6">
@@ -70,8 +67,7 @@
 			class="form-control" name="normal" >
 		</div>
 	</div>
-
-		<div class="form-group">
+	<div class="form-group">
 		<label class="col-sm-2 control-label"> 开发商保护期：
 		</label>
 		<div class="col-sm-6">
@@ -79,7 +75,7 @@
 			class="form-control" name="normal" >
 		</div>
 	</div>
-		<div class="form-group">
+	<div class="form-group">
 		<label class="col-sm-2 control-label"> 认购截至日：
 		</label>
 		<div class="col-sm-6">
@@ -87,7 +83,7 @@
 			class="form-control" name="normal" >
 		</div>
 	</div>
-		<div class="form-group">
+	<div class="form-group">
 		<label class="col-sm-2 control-label"> 佣金规则：
 		</label>
 		<div class="col-sm-6">
@@ -95,7 +91,7 @@
 			class="form-control" name="normal" >
 		</div>
 	</div>
-		<div class="form-group">
+	<div class="form-group">
 		<label class="col-sm-2 control-label"> 奖励措施：
 		</label>
 		<div class="col-sm-6">
@@ -103,69 +99,44 @@
 			class="form-control" name="normal" >
 		</div>
 	</div>
-		</div>
-		<div class="form-group">
-		<label class="col-sm-2 control-label">开发商界定规则：
-		</label>
-		<div class="col-sm-6">
-			<input required="" ng-model="entity.name"
-			class="form-control" name="normal" >
-		</div>
+</div>
+<div class="form-group">
+	<label class="col-sm-2 control-label">开发商界定规则：
+	</label>
+	<div class="col-sm-6">
+		<input required="" ng-model="entity.name"
+		class="form-control" name="normal" >
 	</div>
-		</div>
-		<div class="form-group">
-		<label class="col-sm-2 control-label">项目经理：
-		</label>
-		<div class="col-sm-6">
-			<input required="" ng-model="entity.name"
-			class="form-control" name="normal" >
-		</div>
-	</div>
-	
+</div>
+</div>
+<div class="form-group">
+<label class="col-sm-2 control-label">项目经理：
+</label>
+<div class="col-sm-6">
+	<input required="" ng-model="entity.name"
+	class="form-control" name="normal" >
+</div>
+</div>
+</form>
 
 
 
+<div nh-title>楼盘卖点</div>
+<button type="button" class="btn btn-info" ng-click="open()">上传图片</button>
+<div nh-title>其他</div>
 
+<div deckgrid class="deckgrid" source="photos">
+    <div class="card">
+        
 
+        <img src="" data-ng-src="{{card.src}}" >
+        <h5>3室2厅2卫1阳台 198.89平米 </h5>
+        <h3><a class="glyphicon glyphicon-trash" style="color:red"></a></h3 	>
 
-
-
-
-
-
-
-
-
- 
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	<div nh-title>楼盘卖点</div>
-	<div nh-title>其他</div>
-	<div class="form-group">
-		<div class="col-sm-offset-2 col-sm-10">
-			<button type="buttom" w5c-form-submit="vm.saveEntity()" class="btn btn-success"> 验证</button>
-		</div>
-	</div>
+    </div>
+</div>
+<div class="form-group">
+<div class="col-sm-offset-2 col-sm-10">
+</div>
+</div>
 </form>

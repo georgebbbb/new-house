@@ -1,33 +1,50 @@
 <ol class="breadcrumb">
-  <li><a href="#">首页</a></li>
-  <li><a ui-sref="dynamic.list">楼盘动态</a></li>
-  <li class="active">编辑楼盘动态</li>
+    <li><a href="#">首页</a></li>
+    <li><a ui-sref="dynamic.list">楼盘动态</a></li>
+    <li class="active">编辑楼盘动态</li>
 </ol>
-    <form class="form-horizontal w5c-form demo-form" role="form"
-        w5c-form-validate="vm.validateOptions" novalidate name="validateForm">
-        <div class=" form-group ">
-            <label class="col-sm-2 control-label">标题：</label>
-            <div class="col-sm-10">
-                <input required="" ng-model="entity.name"
-                class="form-control" name="normal" >
-            </div> 
-           
+<form class="form-horizontal w5c-form demo-form" role="form"
+    w5c-form-validate="vm.validateOptions" novalidate name="validateForm">
+    <div class=" form-group ">
+        <label class="col-sm-2 control-label">标题：</label>
+        <div class="col-sm-10">
+            <input required="" ng-model="entity.name"
+            class="form-control" name="normal" >
         </div>
-        <div class="form-group">
-            <label class="col-sm-2 control-label">简介：</label>
-            <div class="col-sm-10">
-                <textarea ng-model="entity.name" class="form-control" rows="3" required="" name="normal"></textarea>
-                
-            </div>
-        </div>
-                <div class="form-group">
-            <label class="col-sm-2 control-label">内容：</label>
-            <div class="col-sm-10">
-               <div text-angular ng-model="htmlVariable"></div>
-                
-            </div>
-        </div>
-        <button type="button" class="btn btn-primary" style="width:100px;margin-left:300px">保存</button>
-        <button type="button" class="btn btn-warning" style="width:100px;margin:auto">取消</button>
         
-    </form>
+    </div>
+    <div class=" form-group ">
+        <label class="col-sm-2 control-label">关联楼盘:</label>
+        <div class="col-sm-3">
+            <select class="form-control" ng-model="entity.name">
+                <option>带看</option>
+                <option>认购</option>
+                <option>签约</option>
+                <option>结佣</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+            <label class="col-sm-2 control-label"></label>
+            <div class="col-sm-8">
+                <input type="checkbox" name="favoriteColors" ng-model="entity.name"> 允许中介查看该跟进
+            </div>
+        </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">简介：</label>
+        <div class="col-sm-10">
+            <textarea ng-model="entity.name" class="form-control" rows="3" required="" name="normal"></textarea>
+            
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">内容：</label>
+        <div class="col-sm-10">
+            <div text-angular ng-model="htmlVariable"></div>
+            
+        </div>
+    </div>
+    <button type="button" class="btn btn-primary" style="width:100px;margin-left:300px">保存</button>
+    <button type="button" class="btn btn-warning" style="width:100px;margin:auto">取消</button>
+    
+</form>
