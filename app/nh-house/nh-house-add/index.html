@@ -5,18 +5,47 @@
 </ol>
 <form class="form-horizontal w5c-form demo-form" role="form"
 	w5c-form-validate="vm.validateOptions" novalidate name="validateForm">
-	<div nh-title>基本信息</div>
+	<div nh-title>新增合作楼盘</div>
+	
 	<div class="form-group">
-		<label class="col-sm-2 control-label">楼盘名称：</label>
+		<label class="col-sm-2 control-label">城市城区:</label>
+		<div class="col-sm-2">
+			<select class="form-control">
+				<option>上海市</option>
+				
+			</select>
+		</div>
+		<div class="col-sm-2">
+			<select class="form-control">
+				<option>xuhui</option>
+				<option>pudong</option>
+				
+			</select>
+		</div>
+		<div class="col-sm-2">
+			<select class="form-control">
+				<option>xuhui</option>
+				<option>pudong</option>
+				
+			</select>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="col-sm-2 control-label">楼盘名称:</label>
 		<div class="col-sm-6">
-			<input  name="normal" ng-model="entity.email" required="" class="form-control">
+			<input required="" ng-model="entity.name"
+			class="form-control" name="normal" >
 		</div>
 	</div>
 	<div class="form-group">
 		<label class="col-sm-2 control-label">物业类别：</label>
 		<div class="col-sm-6">
-			<input required="" ng-model="entity.name"
-			class="form-control" name="normal" >
+			<select class="form-control">
+				<option>xuhui</option>
+				<option>pudong</option>
+				
+			</select>
 		</div>
 	</div>
 	<div class="form-group">
@@ -33,13 +62,22 @@
 			<input required="" ng-model="entity.name"
 			class="form-control" name="normal" >
 		</div>
+		<div class="col-sm-2">
+			<button type="button" class="btn btn-info" ng-click="openMap()">选择百度坐标</button>
+
+		</div>
 	</div>
 	<div class="form-group">
 		<label class="col-sm-2 control-label">售楼处地址：</label>
 		<div class="col-sm-6">
-			<input required="" ng-model="entity.name"
+			<input required="" ng-model="house.salesOfficesAddress"
 			class="form-control" name="normal" >
 		</div>
+				<div class="col-sm-2">
+			<button type="button" class="btn btn-info" ng-click="	openSalesOfficesAddressMap()">选择百度坐标</button>
+
+		</div>
+	
 	</div>
 	
 	<div nh-title>合作规则</div>
@@ -118,22 +156,16 @@
 </div>
 </div>
 </form>
-
-
-
 <div nh-title>楼盘卖点</div>
-<button type="button" class="btn btn-info" ng-click="open()">上传图片</button>
+<button type="button" class="btn btn-info" ng-click="openUpload()">上传图片</button>
 <div nh-title>其他</div>
-
 <div deckgrid class="deckgrid" source="photos">
-    <div class="card">
-        
+<div class="card">
 
-        <img src="" data-ng-src="{{card.src}}" >
-        <h5>3室2厅2卫1阳台 198.89平米 </h5>
-        <h3><a class="glyphicon glyphicon-trash" style="color:red"></a></h3 	>
+<img src="" data-ng-src="{{card.src}}" >
+<h5>3室2厅2卫1阳台 198.89平米 <span style="color:red">删除</span></h5>
 
-    </div>
+</div>
 </div>
 <div class="form-group">
 <div class="col-sm-offset-2 col-sm-10">

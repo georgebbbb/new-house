@@ -85,7 +85,7 @@ config(function($stateProvider, $urlRouterProvider) {
     controller :'nhDynamicList'
 
 
-  }).state('dynamic.add', {
+  }).state('dynamic.add',{
     url: "/add",
     templateUrl: "nh-dynamic/nh-dynamic-add/index.html",
     controller :'nhDynamicAdd'
