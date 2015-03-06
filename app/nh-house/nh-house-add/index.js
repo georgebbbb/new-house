@@ -1,7 +1,14 @@
-angular.module('nhHouse').controller('nhHouseAdd', ['$scope', '$modal', function($scope, $modal) {
+angular.module('nhHouse').controller('nhHouseAdd', ['$scope', '$modal','$validation', function($scope, $modal,$validation) {
 
 
-	$scope.house = {};
+	$scope.house = {
+
+		name:1
+	};
+
+	console.log($validation);
+
+	$scope.house.checkValid = $validation.checkValid;
 
 	$scope.openUpload = function() {
 		var modalInstance = $modal.open({

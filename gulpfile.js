@@ -33,7 +33,7 @@ var source = {
     app: [
       'app/**/*.js'
     ],
-    vendor: [
+    vendor: [ 
       'node_modules/jquery/dist/jquery.min.js',
       'node_modules/lodash/dist/lodash.min.js',
       'node_modules/angular/angular.min.js',
@@ -46,6 +46,8 @@ var source = {
       'node_modules/textangular/dist/textAngular-sanitize.min.js',
       'node_modules/textangular/dist/textAngular.min.js',
       'node_modules/ng-file-upload/dist/angular-file-upload.min.js',
+      'node_modules/angular-validation/dist/angular-validation.min.js',
+      'node_modules/angular-validation/dist/angular-validation-rule.min.js',
       'lib/**/*.js'
     ],
   },
