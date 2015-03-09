@@ -14,110 +14,21 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-	<div nh-title>新增合作楼盘</div>
 	
 	<div class="form-group">
-		<label class="col-sm-2 control-label">城市城区:</label>
-		<div class="col-sm-2">
-			<select class="form-control">
-				<option>上海市</option>
-				
-			</select>
-		</div>
-		<div class="col-sm-2">
-			<select class="form-control">
-				<option>xuhui</option>
-				<option>pudong</option>
-				
-			</select>
-		</div>
-		<div class="col-sm-2">
-			<select class="form-control">
-				<option>xuhui</option>
-				<option>pudong</option>
-				
-			</select>
-		</div>
-	</div>
-	<div class="form-group">
-		<label class="col-sm-2 control-label">楼盘名称:</label>
-		<div class="col-sm-6">
-			<input validator="required" ng-model="house.name"
-			class="form-control"  name="name">
-		</div>
-	</div>
-	<div class="form-group">
-		<label class="col-sm-2 control-label">物业类别：</label>
-		<div class="col-sm-6">
-			<select class="form-control">
-				<option>xuhui</option>
-				<option>pudong</option>
-				
-			</select>
-		</div>
-	</div>
-	<div class="form-group">
-		<label class="col-sm-2 control-label"> 均价：
-		</label>
-		<div class="col-sm-6">
-			<input  ng-model="house.price"
-			class="form-control" name="price" validator="required" >
-		</div>
-	</div>
-	<div class="form-group">
-		<label class="col-sm-2 control-label">楼盘地址：</label>
-		<div class="col-sm-6">
-			<input ng-model="house.address"
-			class="form-control" name="address" validator="required" >
-		</div>
-		<div class="col-sm-2">
-			<button type="button"  ng-disabled="!house.checkValid(Form.address)" class="btn btn-info" ng-click="openMap()">选择百度坐标</button>
-		</div>
-	</div>
-	<div class="form-group" >
-		<label class="col-sm-2 control-label">售楼处地址：</label>
-		<div class="col-sm-6">
-			<input  ng-model="house.salesOfficesAddress"
-			class="form-control" name="salesOfficesAddress"  validator="required">
+		<label class="col-sm-2 control-label">可售户型:</label>
+		<div class="col-sm-10">
+			<button type="button" class="btn btn-info" ng-click="openUpload()" style="margin:5px;">上传图片</button>
+			<div deckgrid class="deckgrid" source="photos">
+				<div class="card">
+					<img src="" data-ng-src="{{card.src}}" >
+					<h5>3室2厅2卫1阳台 198.89平米 <span style="color:red">删除</span></h5>
+				</div>
+			</div>
 			
 		</div>
-		<div class="col-sm-2">
-			<button type="button" ng-disabled="!house.checkValid(Form.salesOfficesAddress)" class="btn btn-info" ng-click="openSalesOfficesAddressMap()">选择百度坐标</button>
-		</div>
-		
-	</div >
+	</div>
 	
-	<button type="button" class="btn btn-info" ng-click="openUpload()">上传图片</button>
-	<div deckgrid class="deckgrid" source="photos">
-		<div class="card">
-			<img src="" data-ng-src="{{card.src}}" >
-			<h5>3室2厅2卫1阳台 198.89平米 <span style="color:red">删除</span></h5>
-		</div>
-	</div>
-
-	  <button type="button" class="btn btn-primary btn-lg"  validation-submit="Form">Submit</button>
+	<hr>
+	<button type="button" class="btn btn-primary btn-lg"  validation-submit="Form" style="margin-left:440px; width:100px;">保存</button>
 </form>
-<!-- <form name="Form">
-	<div class="row">
-		<div>
-			<label>Required</label>
-			<input type="text" name="required" ng-model="form.required" validator="required">
-		</div>
-		<div>
-			<label>Url</label>
-			<input type="text" name="url" ng-model="form.url" validator="required, url">
-		</div>
-		<button validation-submit="Form" ng-click="next()">Submit</button>
-		<button validation-reset="Form">Reset</button>
-	</div>
-</form> -->

@@ -62,7 +62,8 @@ var source = {
     'app/**/*.less'
   ],
   html: [
-    'app/**/*.html'
+    'app/**/*.html',
+    'app/**/*.json'
   ]
 };
 
