@@ -1,9 +1,9 @@
-angular.module('nhHouse').controller('nhHouseAdd', ['$scope', '$modal','$validation', function($scope, $modal,$validation) {
+angular.module('nhHouse').controller('nhHouseAdd', ['$scope', '$modal', '$validation', function($scope, $modal, $validation) {
 
 
 	$scope.house = {
 
-		name:1
+		name: 1
 	};
 
 	console.log($validation);
@@ -33,6 +33,64 @@ angular.module('nhHouse').controller('nhHouseAdd', ['$scope', '$modal','$validat
 		openMap(this.house.salesOfficesAddress);
 	}
 
+
+	$scope.house = {
+		name: '',
+
+		property: 'zhuzhai',
+		address: 'hehe',
+		preferential: '23413',
+		commission: '20',
+		reward: '212',
+		contact: 'sdad',
+		communicate: '1131',
+		basic: 'wewq'
+	}
+	$scope.houseConfig = {
+		name: {
+			templateUrl: 'nh-layout/nh-input/simple.html'
+		},
+		address: {
+			templateUrl: 'nh-layout/nh-input/simpleAndMap.html'
+		},
+		property: {
+			templateUrl: 'nh-layout/nh-input/simple.html'
+		},
+		preferential: 12123,
+		
+		reward: {},
+		contact: {},
+		communicate: {templateUrl: 'nh-layout/nh-input/simpleAndMap.html'},
+		basic: {},
+		defaultConfig: {
+			templateUrl: 'nh-layout/nh-input/simple.html'
+		},
+	}
+		
+
+
+
+	$scope.houseProps = Object.keys($scope.house).map(function(elem){
+		var element ={};
+		element.name=elem;
+		element.lable=elem;
+
+		var temp = $scope.houseConfig[elem];
+			
+		if (angular.isDefined(temp)&&angular.isDefined(temp.templateUrl)) {
+			//console.log($scope.houseConfig['defaultConfig'].templateUrl);
+			
+			element['templateUrl']=temp.templateUrl;
+		
+		} else {
+			element['templateUrl']='nh-layout/nh-input/simple.html';
+			
+		}
+		
+		return element;
+	});
+   
+	console.log($scope.houseProps);
 
 
 	$scope.photos = [{

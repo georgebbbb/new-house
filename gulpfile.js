@@ -16,6 +16,7 @@ var htmlReplace = require('gulp-html-replace');
 var through = require('through2');
 var del = require('del');
 var express = require('express');
+var html2js = require('gulp-html2js')
 
 
 var config = require('./config');
@@ -287,4 +288,17 @@ gulp.task('run', ['watch', 'serve']);
 
 // DEFAULT
 gulp.task('default', ['run']);
+
+
+
+gulp.task('test1',function(){
+
+  gulp.src(source.html)
+    .pipe(html2js({
+      outputModuleName: 'nhHome',
+      useStrict: true
+    }))
+    .pipe(concat('template.js'))
+    .pipe(gulp.dest('./dist'))
+});
 
