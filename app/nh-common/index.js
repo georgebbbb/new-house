@@ -1,0 +1,1 @@
+var nhCommon=angular.module('nhCommon',[]);

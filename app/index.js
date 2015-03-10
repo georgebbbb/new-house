@@ -1,4 +1,4 @@
-angular.module('nhHome', ['ui.router', 'nhHouse', 'nhLayout', 'nhConsumer','nhPersonnel','nhIndividual','nhDynamic']).
+angular.module('nhHome', ['ui.router', 'nhHouse', 'nhLayout', 'nhConsumer','nhPersonnel','nhIndividual','nhDynamic','nhCommon']).
 config(function($stateProvider, $urlRouterProvider) {
 
 

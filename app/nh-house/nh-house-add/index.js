@@ -22,7 +22,19 @@ angular.module('nhHouse').controller('nhHouseAdd', ['$scope', '$modal', '$valida
 	}
 
 
+	
 
+//fireEvent
+angular.element('#test').bind('click',function(){
+
+	 angular.element('#test2')[0].dispatchEvent(evt); 
+});
+
+ var    evt = document.createEvent("MouseEvents");  
+    evt.initMouseEvent("click", true, true, window,  
+      0, 0, 0, 0, 0, false, false, false, false, 0, null);  
+  
+   
 
 	//this code is disgust and dirty
 	$scope.house = {
