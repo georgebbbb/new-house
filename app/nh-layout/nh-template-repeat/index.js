@@ -10,7 +10,7 @@ angular.module('nhLayout').directive('nhSingleInput',  function(){
 		 restrict: 'A,E', // E = Element, A = Attribute, C = Class, M = Comment
 		// template: '',
 		 templateUrl: 'nh-layout/nh-single-input/index.html',
-		replace: true,
+		 replace: true,
 		 transclude: true,
 		// compile: function(tElement, tAttrs, function transclude(function(scope, cloneLinkingFn){ return function linking(scope, elm, attrs){}})),
 		link: function($scope, iElm, iAttrs, controller) {

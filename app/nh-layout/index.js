@@ -1,2 +1,2 @@
-var nhLayout=angular.module('nhLayout',['w5c.validator']);
+var nhLayout=angular.module('nhLayout',['w5c.validator','nhCommon']);
 

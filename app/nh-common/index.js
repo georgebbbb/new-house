@@ -1,1 +1,1 @@
-var nhCommon=angular.module('nhCommon',[]);
+var nhCommon=angular.module('nhCommon',['ui.bootstrap']);
