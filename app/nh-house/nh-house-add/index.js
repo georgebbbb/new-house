@@ -1,21 +1,14 @@
 angular.module('nhHouse').controller('nhHouseAdd', ['$scope', '$validation', '$http', function($scope, $validation, $http) {
-                              
 
-   
 
-	//this code is disgust and dirty
-	$scope.house = {
-		name: '',
+	$http.get('json/house.json').success(function(data) {
 
-		property: 'zhuzhai',
-		address: 'hehe',
-		preferential: '23413',
-	
-		reward: '212',
-		contact: 'sdad',
-		communicate: '1131',
-		basic: 'wewq'
-	}
+		$scope.house = data;
+
+
+	});
+
+
 	$scope.houseConfig = {
 		name: {
 			templateUrl: 'nh-layout/nh-input/simple.html',
@@ -80,37 +73,6 @@ angular.module('nhHouse').controller('nhHouseAdd', ['$scope', '$validation', '$h
 			templateUrl: 'nh-layout/nh-input/simple.html'
 		},
 	}
-
-	//this code is disgust and dirty
-	var houseProps =Object.keys($scope.houseConfig).filter(function(elem){
-		return elem!='defaultConfig';
-	});
-
-	//this code is disgust and dirty
-	$scope.houseProps = houseProps.map(function(elem) {
-		
-					var element = {};
-		element.name = elem;
-		element.lable = $scope.houseConfig[elem] ? $scope.houseConfig[elem].lable : '';
-		element.value = $scope.house[elem];
-
-		var temp = $scope.houseConfig[elem];
-
-		if (angular.isDefined(temp) && angular.isDefined(temp.templateUrl)) {
-			//console.log($scope.houseConfig['defaultConfig'].templateUrl);
-
-			element['templateUrl'] = temp.templateUrl;
-
-		} else {
-			element['templateUrl'] = 'nh-layout/nh-input/simple.html';
-
-		}
-
-		return element;
-
-		
-
-	});
 
 
 

@@ -3,14 +3,18 @@
 	<li><a ui-sref="houses.list">楼盘列表</a></li>
 	<li class="active">新增楼盘</li>
 </ol>
+<div nh-template-repeat data="house" config="houseConfig">
+</div>
+
+
+
+
+
 <form class="form-horizontal" role="form" id="house" 
 	novalidate name="Form" >
 
 
 
-	<div  ng-repeat="houseProp in houseProps" ng-include="houseProp.templateUrl">
-	
-	</div>
 
 
 
