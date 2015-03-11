@@ -32,7 +32,7 @@ angular.module('nhLayout').directive('nhBaiduMap', function() {
 			myGeo.getPoint($scope.address, function(point) {
 				if (point) {
 
-					scope.point=point;
+					$scope.point=point;
 					map.centerAndZoom(point, 16);
 					map.addOverlay(new BMap.Marker(point));
 				} else {

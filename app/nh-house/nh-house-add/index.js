@@ -1,39 +1,6 @@
-angular.module('nhHouse').controller('nhHouseAdd', ['$scope', '$modal', '$validation', '$http', function($scope, $modal, $validation, $http) {
+angular.module('nhHouse').controller('nhHouseAdd', ['$scope', '$validation', '$http', function($scope, $validation, $http) {
+                              
 
-
-	//this code is disgust and dirty
-	$scope.openUpload = function() {
-			var modalInstance = $modal.open({
-				templateUrl: 'nh-house/nh-house-add/nh-house-upload-image/index.html',
-				controller: 'nhHouseUploadImage',
-			});
-		}
-	//this code is disgust and dirty
-	$scope.openMap = function(input) {
-		var modalInstance = $modal.open({
-			templateUrl: 'nh-house/nh-house-add/nh-house-baidu-map/index.html',
-			controller: 'nhHouseBaiduMap',
-			resolve: {
-				address: function() {
-					return input;
-				}
-			}
-		});
-	}
-
-
-	
-
-//fireEvent
-angular.element('#test').bind('click',function(){
-
-	 angular.element('#test2')[0].dispatchEvent(evt); 
-});
-
- var    evt = document.createEvent("MouseEvents");  
-    evt.initMouseEvent("click", true, true, window,  
-      0, 0, 0, 0, 0, false, false, false, false, 0, null);  
-  
    
 
 	//this code is disgust and dirty
@@ -67,6 +34,7 @@ angular.element('#test').bind('click',function(){
 
 		},
 		salesOffices: {
+			templateUrl: 'nh-layout/nh-input/simpleAndMap.html',
 			lable: '售楼处地址',
 		},
 

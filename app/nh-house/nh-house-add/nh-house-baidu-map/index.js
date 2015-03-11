@@ -9,7 +9,7 @@ angular.module('nhHouse')
 
 
 $scope.address=address;
-
+console.log($scope.address);
 $scope.point="122";            
 
   $scope.ok = function () {
