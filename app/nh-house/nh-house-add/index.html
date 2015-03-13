@@ -3,11 +3,14 @@
 	<li><a ui-sref="houses.list">楼盘列表</a></li>
 	<li class="active">新增楼盘</li>
 </ol>
-<div nh-template-repeat data="house" config="houseConfig">
-</div>
+<!-- <div nh-template-repeat data="house" config="houseConfig">
+</div> -->
 
 
-
+<dynamic-form template="formTemplate"
+        ng-model="formData"
+        ng-submit="processForm()">
+    </dynamic-form>
 
 
 <form class="form-horizontal" role="form" id="house" 
