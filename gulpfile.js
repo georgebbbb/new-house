@@ -37,6 +37,7 @@ var source = {
     vendor: [ 
       'node_modules/jquery/dist/jquery.min.js',
       'node_modules/lodash/dist/lodash.min.js',
+      'node_modules/api-check/dist/apiCheck.min.js',
       'node_modules/angular/angular.min.js',
       'node_modules/angular-ui-router/release/angular-ui-router.min.js',
       'node_modules/angular-dragdrop/src/angular-dragdrop.min.js',
@@ -49,6 +50,8 @@ var source = {
       'node_modules/ng-file-upload/dist/angular-file-upload.min.js',
       'node_modules/angular-validation/dist/angular-validation.min.js',
       'node_modules/angular-validation/dist/angular-validation-rule.min.js',
+      'node_modules/angular-formly/dist/formly.min.js',
+      'node_modules/angular-formly-templates-bootstrap/dist/angular-formly-templates-bootstrap.min.js',
       'lib/**/*.js'
     ],
   },

@@ -1,6 +1,38 @@
 angular.module('nhHouse').controller('nhHouseAdd', ['$scope', '$validation', '$http', function($scope, $validation, $http) {
 
 
+
+
+
+
+	console.log(this);
+console.log($scope);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	$http.get('json/house.json').success(function(data) {
 
 		$scope.house = data;

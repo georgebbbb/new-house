@@ -5,7 +5,7 @@ config(function($stateProvider, $urlRouterProvider) {
 
   //
   // For any unmatched url, redirect to /state1
-  $urlRouterProvider.otherwise("/houses");
+  $urlRouterProvider.otherwise("/houses.list");
   //
   // Now set up the states
   $stateProvider

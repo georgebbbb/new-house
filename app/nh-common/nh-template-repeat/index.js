@@ -19,17 +19,17 @@ angular.module('nhCommon').directive('nhTemplateRepeat', function($parse, $modal
 		link: function($scope, iElm, iAttrs, controller) {
 			console.log(iAttrs['data']);
 
-			$scope.dataProps = [{
-				lable: "楼盘名称"
-				name: "name"
-				templateUrl: "nh-layout/nh-input/simple.html"
-				value: ""
-			}, {
-				lable: "楼盘卖点"
-				name: "point"
-				templateUrl: "nh-layout/nh-input/editText.html"
-				value: undefined
-			}];
+			// $scope.dataProps = [{
+			// 	lable: "楼盘名称"
+			// 	name: "name"
+			// 	templateUrl: "nh-layout/nh-input/simple.html"
+			// 	value: ""
+			// }, {
+			// 	lable: "楼盘卖点"
+			// 	name: "point"
+			// 	templateUrl: "nh-layout/nh-input/editText.html"
+			// 	value: undefined
+			// }];
 
 
 
