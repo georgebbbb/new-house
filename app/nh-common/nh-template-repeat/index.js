@@ -4,32 +4,23 @@ angular.module('nhCommon').directive('nhTemplateRepeat', function($parse, $modal
 		// name: '',
 		// priority: 1,
 		// terminal: true,
-		scope: {
-			data: '=',
-			dataConfig: '=config'
-		}, // {} = isolate, true = child, false/undefined = no change
+		scope:true,
+		// scope: {
+		// 	data: '=',
+		// 	dataConfig: '=config'
+		// }, // {} = isolate, true = child, false/undefined = no change
 		// controller: function($scope, $element, $attrs, $transclude) {},
 		// require: 'ngModel', // Array = multiple requires, ? = optional, ^ = check parent elements
 		restrict: 'A', // E = Element, A = Attribute, C = Class, M = Comment ng-include="dataProp.templateUrl"
-		template: ' <div ng-repeat = "dataProp in dataProps" > </div>',
+		template: ' <div ndata-ng-repeat = "dataProp in dataProps"  data-ng-include="nh-layout/nh-input/simple.html"> </div>',
 		// templateUrl: '',
 		replace: true,
 		transclude: true,
 		// compile: function(tElement, tAttrs, function transclude(function(scope, cloneLinkingFn){ return function linking(scope, elm, attrs){}})),
-		link: function($scope, iElm, iAttrs, controller) {
+		controller: function($scope, iElm, iAttrs, controller) {
 			console.log(iAttrs['data']);
 
-			// $scope.dataProps = [{
-			// 	lable: "楼盘名称"
-			// 	name: "name"
-			// 	templateUrl: "nh-layout/nh-input/simple.html"
-			// 	value: ""
-			// }, {
-			// 	lable: "楼盘卖点"
-			// 	name: "point"
-			// 	templateUrl: "nh-layout/nh-input/editText.html"
-			// 	value: undefined
-			// }];
+
 
 
 

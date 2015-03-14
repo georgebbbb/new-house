@@ -5,6 +5,7 @@ angular.module('nhHouse').controller('nhHouseAdd', ['$scope', '$validation', '$h
 
 
 
+
 	console.log(this);
 console.log($scope);
 
@@ -35,10 +36,41 @@ console.log($scope);
 
 	$http.get('json/house.json').success(function(data) {
 
+	$http.get('json/house.json',{cache:false}).success(function(data) {
+
+
 		$scope.house = data;
 
 
 	});
+	$scope.formData = {};   // JavaScript needs an object to put our form's models into.
+
+    $scope.formTemplate = [
+        {
+            "type": "text",
+            "label": "First Name",
+            "model": "name.first"
+        },
+        {
+            "type": "text",
+            "label": "Last Name",
+            "model": "name.last"
+        },
+        {
+            "type": "email",
+            "label": "Email Address",
+            "model": "email"
+        },
+        {
+            "label":"提交",
+            "type": "submit",
+            "model": "submit"
+        },
+    ];
+
+    $scope.processForm = function () {
+        /* Handle the form submission... */
+    };
 
 
 	$scope.houseConfig = {
