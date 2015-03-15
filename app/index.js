@@ -22,7 +22,7 @@ config(function($stateProvider, $urlRouterProvider) {
   }).state('houses.add', {
     url: ":houseId/add",
     templateUrl: "nh-house/nh-house-add/index.html",
-    controller: 'nhHouseAdd'
+    controller: 'nhHouseAdd as vm'
 
   }).state('houses.detail', {
     url: ":houseId/detail",
@@ -76,7 +76,6 @@ config(function($stateProvider, $urlRouterProvider) {
   }).state('dynamic', {
     url: "/dynamic",
     templateUrl: "nh-dynamic/index.html",
-        
 
 
   }).state('dynamic.list', {

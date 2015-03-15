@@ -6,19 +6,23 @@
 <!-- <div nh-template-repeat data="house" config="houseConfig">
 </div> -->
 
-
-<dynamic-form template="formTemplate"
-        ng-model="formData"
-        ng-submit="processForm()">
-    </dynamic-form>
+   <form ng-submit="vm.onSubmit()" novalidate>
+        <formly-form model="vm.model" fields="vm.fields">
+          <button type="submit" class="btn btn-primary submit-button">Submit</button>
+        </formly-form>
 
 
 <form class="form-horizontal" role="form" id="house" 
 	novalidate name="Form" >
 
 
-
-
+<div ng-controller="ParentCtrl">
+   <a ng-click="logThisAndScope()">log "this" and $scope</a> - parent scope
+   <div ng-controller="ChildCtrl">
+      <a ng-click="logThisAndScope()">log "this" and $scope</a> - child scope
+   </div>
+</div>
+	
 
 
 	

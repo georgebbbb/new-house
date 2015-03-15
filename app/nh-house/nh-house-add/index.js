@@ -1,76 +1,39 @@
-angular.module('nhHouse').controller('nhHouseAdd', ['$scope', '$validation', '$http', function($scope, $validation, $http) {
+angular.module('nhHouse').controller('nhHouseAdd', ['$scope', '$validation', '$http','formlyVersion', function($scope, $validation, $http,formlyVersion) {
 
 
 
+    var vm = this;
+    // funcation assignment
+    vm.onSubmit = onSubmit;
 
-
-
-
-	console.log(this);
-console.log($scope);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	$http.get('json/house.json').success(function(data) {
-
-	$http.get('json/house.json',{cache:false}).success(function(data) {
-
-
-		$scope.house = data;
-
-
-	});
-	$scope.formData = {};   // JavaScript needs an object to put our form's models into.
-
-    $scope.formTemplate = [
-        {
-            "type": "text",
-            "label": "First Name",
-            "model": "name.first"
-        },
-        {
-            "type": "text",
-            "label": "Last Name",
-            "model": "name.last"
-        },
-        {
-            "type": "email",
-            "label": "Email Address",
-            "model": "email"
-        },
-        {
-            "label":"提交",
-            "type": "submit",
-            "model": "submit"
-        },
-    ];
-
-    $scope.processForm = function () {
-        /* Handle the form submission... */
+    // variable assignment
+    vm.author = {
+      name: 'Kent C. Dodds',
+      url: 'https://twitter.com/kentcdodds'
     };
+    vm.exampleTitle = 'Custom controller & Link';
+    vm.env = {
+      angularVersion: angular.version.full,
+      formlyVersion: formlyVersion
+    };
+
+    vm.model = {};
+    
+    vm.fields = [
+      {
+        key: 'text',
+        type: 'input',
+        templateOptions: {
+          label: 'Check the console',
+          placeholder: 'Controller and Link at the type level'
+        }
+      }
+      
+    ];
+   
+  function onSubmit() {
+      alert(JSON.stringify(vm.model), null, 2);
+    }
 
 
 	$scope.houseConfig = {
@@ -169,3 +132,19 @@ console.log($scope);
 	];
 
 }]);
+
+angular.module('nhHouse').controller('ParentCtrl', function($scope) {
+
+
+	$scope.logThisAndScope = function() {
+		console.log(this, $scope)
+	}
+
+
+
+});
+angular.module('nhHouse').controller('ChildCtrl', function() {
+
+
+
+});
