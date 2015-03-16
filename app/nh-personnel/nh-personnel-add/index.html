@@ -1,66 +1,87 @@
 <div class="modal-header">
-    <h3 class="modal-title">写跟进</h3>
+    <h3 class="modal-title">
+新增案场人员</h3>
 </div>
 <div class="modal-body">
     <form class="form-horizontal w5c-form demo-form" role="form"
         w5c-form-validate="vm.validateOptions" novalidate name="validateForm">
-        <div class="form-group">
-            <label class="col-sm-3 control-label">报备人：</label>
-            <div class="col-sm-8">
-                <h5> 报备人：</h5>
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="col-sm-3 control-label">客户状态：</label>
-            <div class="col-sm-8">
-                <select class="form-control" ng-model="entity.name">
-                    <option>带看</option>
-                    <option>认购</option>
-                    <option>签约</option>
-                    <option>结佣</option>
-                </select>
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="col-sm-3 control-label">是否认筹：</label>
-            <div class="col-sm-3">
-                <label>
-                    <input type="radio" name="chickenEgg" value="true" ng-model="entity.isRaise" checked="true">
-                    是
-                </label>
-            </div>
-            <div class="col-sm-3">
-                <label>
-                    <input type="radio" name="chickenEgg" value="flase" ng-model="entity.isRaise">
-                    否
-                </label>
-            </div>
-        </div>
-                <div class="form-group">
-            <label class="col-sm-3 control-label"></label>
-            <div class="col-sm-8">
-             <input type="checkbox" name="favoriteColors" ng-model="entity.name"> 允许中介查看该跟进
-            </div>
-        </div>
+
+       
+ 
+          
         <div class=" form-group ">
-            <label class="col-sm-3 control-label">带看有效期：</label>
+            <label class="col-sm-3 control-label"> 手机：</label>
             <div class="col-sm-6">
                 <input required="" ng-model="entity.name"
                 class="form-control" name="normal" >
-            </div> <span  class="control-label" style="text-align: left ;line-height: 35px" >天</span>
+            </div> 
            
         </div>
-        <div class="form-group">
-            <label class="col-sm-3 control-label">  跟进描述：</label>
-            <div class="col-sm-8">
-                <textarea ng-model="entity.name" class="form-control" rows="3" required="" name="normal"></textarea>
-                
-            </div>
+                <div class=" form-group ">
+            <label class="col-sm-3 control-label"> 初始密码:</label>
+            <div class="col-sm-6">
+                <input required="" ng-model="entity.name"
+                class="form-control" name="normal" >
+            </div> 
+           
         </div>
-        
+             <div class=" form-group ">
+            <label class="col-sm-3 control-label">       姓名：    :</label>
+            <div class="col-sm-6">
+                <input required="" ng-model="entity.name"
+                class="form-control" name="normal" >
+            </div> 
+           
+        </div>
+    <div class=" form-group ">
+        <label class="col-sm-3 control-label">关联楼盘:</label>
+        <div class="col-sm-6">
+            <select class="form-control" ng-model="entity.name">
+                <option>带看</option>
+                <option>认购</option>
+                <option>签约</option>
+                <option>结佣</option>
+            </select>
+        </div>
+    </div>    <div class=" form-group ">
+        <label class="col-sm-3 control-label">驻守楼盘:</label>
+        <div class="col-sm-6">
+            <select class="form-control" ng-model="entity.name">
+                <option>带看</option>
+                <option>认购</option>
+                <option>签约</option>
+                <option>结佣</option>
+            </select>
+        </div>
+        <a ng-href="">添加</a>
+    </div>    <div class=" form-group ">
+        <label class="col-sm-3 control-label">驻守楼盘:</label>
+        <div class="col-sm-6">
+            <select class="form-control" ng-model="entity.name">
+                <option>带看</option>
+                <option>认购</option>
+                <option>签约</option>
+                <option>结佣</option>
+            </select>
+        </div>
+          <a ng-href="">移除</a>
+    </div>
+
+ <div class=" form-group ">
+        <label class="col-sm-3 control-label">用户状态:</label>
+        <div class="col-sm-6">
+            <select class="form-control" ng-model="entity.name">
+                <option>带看</option>
+                <option>认购</option>
+                <option>签约</option>
+                <option>结佣</option>
+            </select>
+        </div>
+    </div>
+
     </form>
 </div>
 <div class="modal-footer">
-    <button class="btn btn-primary" ng-click="save()">保存</button>
+    <button class="btn btn-primary" ng-click="save()">提交</button>
     <button class="btn btn-warning" ng-click="cancel()">取消</button>
 </div>
