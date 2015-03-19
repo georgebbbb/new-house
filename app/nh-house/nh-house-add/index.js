@@ -1,7 +1,15 @@
 angular.module('nhHouse').controller('nhHouseAdd', ['$scope', '$validation', '$http', function($scope, $validation, $http) {
                               
 
-   
+
+
+
+  // $scope.test= $http.get('json/house.json');
+
+  //  $scope.test.success(function(data){
+  //  	console.log(data);
+
+  //  });
 
 	//this code is disgust and dirty
 	$scope.house = {
